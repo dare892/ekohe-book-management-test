@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: a1ffab7246fe7a77438f9e582e5b2ffacba32bb6
+  branch: master
+  specs:
+    faker (2.14.0)
+      i18n (>= 1.6, < 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -69,6 +77,8 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
+    jsonapi-serializer (2.1.0)
+      activesupport (>= 4.2)
     jwt (2.2.2)
     listen (3.3.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -153,6 +163,8 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
+  faker!
+  jsonapi-serializer
   jwt
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
