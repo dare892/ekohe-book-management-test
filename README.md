@@ -28,11 +28,18 @@ rails s
 ### Deployed at:
 https://book-management-test-ekohe.herokuapp.com/
 
+### Design ideas, assumptions made
+- Tables : User, Book, BookRental
+- Rails api-only server
+- Relational database (posgres) due to foreign keys
+- Basic http requests with Authorization header for identification.
+- Requirements pdf stated fee deduction at the return of a book, but it made more sense to deduct at the beginning of the rental.
+- Controller(request) tests set up
+
 ### API Documentation found at
 https://documenter.getpostman.com/view/9443682/TVep7nT2
 
 ### Additional Good-to-know Gotchas/Features
 * Would have committed more frequently if I were to collaborate, but it was a simple app with just me workng on it so there's not much commit history.
-*
 * basic testing framework in place.
 * Spent ~3 hours total.
