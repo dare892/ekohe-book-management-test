@@ -4,7 +4,14 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if user.save
-      render json: UserSerializer.new(user).serializable_hash.to_json
+      hash = UserSerializer.new(user).serializable_hash
+      command = AuthenticateUser.call(user_params[:email], user_params[:password])
+      if command.success?
+        hash[:data][:attributes][:auth_token] = command.result
+        render json: hash.to_json
+      else
+        render json: { error: command.errors }, status: :unauthorized
+      end
     else
       render json: {error: user.errors.full_messages.join(',')}, status: :unprocessable_entity
     end
